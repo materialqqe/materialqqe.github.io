@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+:root {
+    --about-section-bg: url('background-about.png');
+    --success-path-bg: url('background-success.png');
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #061321;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    align-items: LEFT;
+}
+
+.contact-item {
+    margin-left: 20px; /* Space between contact items */
+    text-align: left; /* Align text to the right */
+}
+
+.contact-heading {
+    font-weight: 800;
+    display: block; /* Ensure headings and details are on separate lines */
+}
+
+.contact-detail {
+    display: block; /* Ensure headings and details are on separate lines */
+    text-decoration: none;
+    color: #69778A;
+    ;
+}
+
+.main-nav {
+    background-color: #07192D;
+    padding: 10px 0;
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.background-image {
+    background: url('backg1.png') no-repeat center center/cover;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+}
+
+.background-image .overlay {
+    position: relative;
+    z-index: 2; /* Ensure the overlay text is above the darkened background */
+}
+
+.overlay {
+    padding: 40px 40px 40px 10px; /* Adjust left padding */
+    text-align: left;
+}
+
+.overlay h1 {
+    font-size: 4em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.overlay p {
+    font-size: 1.9em;
+}
+.new-section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    z-index: 3; /* Установить более высокий уровень z-index, чем у блока с надписью и задним фоном */
+    width: 70%; /* Растянуть блок на всю ширину */
+    top: 98%; /* Разместить блок выше картинки */
+    margin-top: -100px; /* Поднять блок выше и перекрыть надпись "О нас" */
+}
+
+.new-section img {
+    width: calc(25% - 20px); /* Увеличить ширину изображений */
+    margin: 0 20px;
+}
+
+
+
+
+
+.custom-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: url('backg2.png') no-repeat center center/cover;
+    transition: background-image 0.5s ease; /* Add transition for smooth effect */
+}
+
+.about-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature {
+    width: 45%;
+    margin-bottom: 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.feature:hover {
+    background-image: url('Rectangle\ 776.png'); /* Change background image on hover */
+    transition: background-image 0.5s ease; /* Add transition for smooth effect */
+}
+
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature {
+    width: 45%;
+    margin-bottom: 20px;
+    background-color: #d1cdcd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.feature h3 {
+    margin-top: 0;
+}
+
+.services-pricing {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.services-pricing h2 {
+    font-size: 2em;
+    text-decoration: none;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.services-pricing p {
+    margin-bottom: 40px;
+}
+
+.vehicle-types {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.vehicle {
+    text-align: center;
+}
+
+.vehicle img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    width: 22%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.plan.vip {
+    position: relative; /* Create a positioning context */
+    color: white; /* Text color */
+    padding: 20px; /* Adjust padding as needed */
+    z-index: 0; /* Set the stacking order */
+}
+
+.plan.vip::before {
+    content: ""; /* Add an empty content to the pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    background: url('Rectangle\ 780.png') no-repeat center center; /* Add the background image */
+    background-size: cover; /* Cover the entire area */
+    opacity: 0.5; /* Make the image semi-transparent */
+    z-index: -1; /* Send the pseudo-element to the back */
+    border-radius: 10px; /* Add border radius if needed */
+}
+.plan h3 {
+    margin-top: 0;
+}
+
+.plan .price {
+    font-size: 2em;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.plan ul {
+    padding: 0;
+    list-style: none;
+}
+
+.plan ul li {
+    margin-bottom: 10px;
+}
+
+.plan .duration {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.success-path {
+    padding: 60px 20px;
+    background: url('Rectangle\ 784.png') no-repeat center center/cover;
+    color: white;
+}
+
+.success-path .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.success-path h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.success-path h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.success-path p {
+    margin-bottom: 40px;
+}
+
+.success-path .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.success-path .image-wrapper {
+    display: flex;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.success-path .image-wrapper img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.success-path .text-content {
+    padding: 20px;
+    max-width: 400px;
+    text-align: left;
+    text-decoration: none;
+    color: #061321;
+}
+
+.success-path .text-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.success-path .text-content ul {
+    padding: 0;
+    list-style: none;
+}
+
+.success-path .text-content ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.success-path .text-content ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: green;
+}
+.map {
+    background-color: #000;
+}
+
+.footer {
+    background-image: url('Rectangle\ 725.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 300px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+}
+
+.footer-section img {
+    height: 30px; /* Adjust the height of the logo */
+}
+
+.footer-section a {
+    color: #00a2ff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom a,
+.footer-bottom p {
+    display: inline-block; /* Display elements horizontally */
+    margin: 0 10px; /* Add margin for spacing */
+}
+
+.footer-bottom a {
+    color: #00a2ff;
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 1200px) {
+    .features .feature {
+        width: 48%;
+    }
+
+    .pricing-plans .plan {
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-info {
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features .feature {
+        width: 100%;
+    }
+
+    .pricing-plans .plan {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px;
+    }
+
+    .overlay h1 {
+        font-size: 2em;
+    }
+
+    .overlay p {
+        font-size: 1em;
+    }
+
+    .about-section h2,
+    .services-pricing h2,
+    .success-path h2,
+    .success-path h1 {
+        font-size: 1.5em;
+    }
+
+    .services-pricing p {
+        font-size: 1em;
+    }
+
+    .pricing-plans .plan {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .logo span {
+        font-size: 1.2em;
+    }
+
+    .contact-info {
+        align-items: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+
+    .overlay h1 {
+        font-size: 1.5em;
+    }
+
+    .overlay p {
+        font-size: 0.9em;
+    }
+
+    .about-section h2,
+    .services-pricing h2,
+    .success-path h2,
+    .success-path h1 {
+        font-size: 1.2em;
+    }
+
+    .services-pricing p {
+        font-size: 0.9em;
+    }
+
+    .vehicle img {
+        height: 80px;
+    }
+
+    .pricing-plans .plan {
+        width: 100%;
+    }
+}
