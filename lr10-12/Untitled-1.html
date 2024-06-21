@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+    <script>
+    function showSeconds() {
+        var now = new Date();
+        var seconds = now.getSeconds();
+        document.getElementById("secondsResult").textContent = "Текущее количество секунд: " + seconds;
+    }
+</script>
+    <script src="function f(x).js"></script>
+  
+</head>
+<body>
+    <script>
+        function showNameSurname() {
+            var count = 0;
+            var nameSurname = "Кривенко Евгений";
+            var result = "";
+            do {
+                result += nameSurname + "\n";
+                count++;
+            } while (count < 14);
+            document.getElementById("nameSurnameResult").innerHTML = result.replace(/\n/g, "<br>");
+        }
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function arrayOperations() {
+            // Сформировать массив из 10 случайных целых элементов (например, от 1 до 100)
+            var arr = Array.from({length: 10}, () => getRandomInt(1, 100));
+            var originalArr = [...arr]; // Копия оригинального массива
+
+            // Подсчитать количество элементов массива, кратных числу 5
+            var countMultiplesOf5 = arr.filter(num => num % 5 === 0).length;
+
+            // Найти минимальный элемент и его индекс
+            var minElement = Math.min(...arr);
+            var minIndex = arr.indexOf(minElement);
+
+            // Поменять местами последний и минимальный элемент
+            var lastIndex = arr.length - 1;
+            var temp = arr[lastIndex];
+            arr[lastIndex] = arr[minIndex];
+            arr[minIndex] = temp;
+
+            // Выводить результаты
+            document.getElementById("arrayOriginal").textContent = "Исходный массив: " + originalArr.join(", ");
+            document.getElementById("arrayMultiplesOf5").textContent = "Количество элементов, кратных 5: " + countMultiplesOf5;
+            document.getElementById("arrayChanged").textContent = "Изменённый массив: " + arr.join(", ");
+        }
+
+        function stringOperations() {
+            // Создать строковые переменные
+            var s1 = "Я люблю Беларусь";
+            var s2 = "Я учусь в Политехническом колледже";
+            
+            // 1. Определить длину строки S2
+            var lengthS2 = s2.length;
+
+            // 2. Определить, встречается ли в строке S1 слово "Гродно"
+            var containsGrodno = s1.includes("Гродно");
+
+            // 3. Выделить n-ый символ в строке S2 (предположим n = 5 для примера)
+            var n = 5; // заменить на ваш номер варианта
+            var nthChar = s2.charAt(n - 1); // нумерация символов начинается с 0
+            var asciiCode = nthChar.charCodeAt(0);
+
+            // Выводить результаты
+            document.getElementById("stringLengthS2").textContent = "Длина строки S2: " + lengthS2;
+            document.getElementById("containsGrodno").textContent = "Содержит ли строка S1 слово 'Гродно': " + (containsGrodno ? "Да" : "Нет");
+            document.getElementById("nthCharS2").textContent = n + "-й символ в строке S2: " + nthChar + ", его ASCII-код: " + asciiCode;
+        }
+    </script>
+    <button onclick="showSeconds()">Показать количество секунд</button>
+    <p id="secondsResult"></p>
+
+    <button onclick="showNameSurname()">Показать Имя и Фамилию</button>
+    <p id="nameSurnameResult"></p>
+
+    <button onclick="arrayOperations()">Выполнить операции с массивом</button>
+    <p id="arrayOriginal"></p>
+    <p id="arrayMultiplesOf5"></p>
+    <p id="arrayChanged"></p>
+
+    <button onclick="stringOperations()">Выполнить операции со строками</button>
+    <p id="stringLengthS2"></p>
+    <p id="containsGrodno"></p>
+    <p id="nthCharS2"></p>
+
+    <h2>Function f(x)</h2>
+    <label for="inputX">Enter x:</label>
+    <input type="number" id="inputX">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+</body>
+</html>

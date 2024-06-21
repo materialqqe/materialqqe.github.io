@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .setka {
+            display: grid;
+            grid-template-rows: 50px 1fr 150px 1fr 50px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .header, .footer {
+            background-color: #ddd;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            grid-column: 1 / -1;
+        }
+
+        .footer {
+            grid-column: 1 / -1;
+        }
+
+        .box {
+            background-color: #f9f9f9;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .photos img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            background-color: #f9f9f9;
+        }
+
+        .photos {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="setka">
+        <div class="header">HEADER</div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="photos">
+            <div class="photo"><img src="https://via.placeholder.com/150" alt="Photo 1"></div>
+            <div class="photo"><img src="https://via.placeholder.com/150" alt="Photo 2"></div>
+            <div class="photo"><img src="https://via.placeholder.com/150" alt="Photo 3"></div>
+            <div class="photo"><img src="https://via.placeholder.com/150" alt="Photo 4"></div>
+        </div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>

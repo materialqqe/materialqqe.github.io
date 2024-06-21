@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <!-- Фон -->
+      <style>
+        body {
+        background-image:url(background.jpg);
+            font-size: 16pt;
+            font-family: 'Arial', serif;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя HTML-страница</title>
+ <!-- Мета-теги -->
+<meta content="Моя веб-страница" name="description">
+<meta content="Ваше имя" name="author">
+</head>
+<body>
+<!-- Заголовок -->
+<h1>Кривенко Евгений Витальевич </h1>
+
+<!-- Создание списков -->
+<h2 id="skills">Создание списков:</h2>
+<ul>
+    <li>Привет</li>
+    <li>Маша</li>
+    <li>Весна</li>
+</ul>
+    <!-- Изображение -->
+<img src="waw.jpg" alt="Моя фотография" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
+<p style="text-align: center; font-size: 12px;">HTML</p>
+
+    <!-- Таблица -->
+    <h2 id="project">Создать таблицу следующего вида:</h2>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+    <table>
+        <tr>
+            <th >Экзамен</th>
+            <th>ОАИП</th>
+            <th>КПиЯП</th>
+        </tr>
+        <tr>
+            <td rowspan="3" ></td>
+            <td>10</td>
+            <td>10</td>
+        </tr>
+    </table>
+
+    <!-- Текст-->
+    <article>
+        <h2 style="font-family: Arial, sans-serif; font-size: 14;">Кривенко Евгений Витальевич</h2>
+        <p style="font-family: Arial, sans-serif; color: rgb(161, 17, 17);">Группа ПЗТ-37</p>
+
+           <br style="text-align:right;text-decoration:underline;">Курс - 3</br>
+           <br STYLE="text-align:center;text-decoration:underline;"> Мои увлечения:ДОТА
+        </article>
+    
+     <!-- форма -->
+    <h1 id="form">Регистрация</h1>
+    <p>Пожалуйста, заполните форму :</p>
+    <form action="/submit" method="post">
+        <label for="fname">Ваше Имя:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">E-mail:</label><br>
+        <input type="text" id="mail" name="mail"><br>
+        <label for="number">Номер телефона:</label></br>
+        <input type="text" id="number" name="number"><br>
+        <label for="female">Сообщение:</label></br>
+        <input type="text" id="message" name="message"> <br>
+        <input type="submit" value="Отправить сообщение">
+    </form>
+     <!-- Гиперссылки -->
+     <h1>Нажмите на изображение, чтобы перейти на другую страницу</h1>
+     <a href="2.html">
+       <img src="waw.jpg" style="width: 200px; height: 200px; display: block; margin: 0 auto;" alt="Описание изображения">
+     </a>
+</body>
+</html>

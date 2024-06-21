@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+        .form-section {
+            flex: 2;
+            margin-right: 20px;
+        }
+        .order-summary {
+            flex: 1;
+            border-left: 1px solid #ddd;
+            padding-left: 20px;
+        }
+        .form-section h2,
+        .order-summary h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+        .breadcrumb {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .form-section p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-section label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .form-section input,
+        .form-section textarea {
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .form-section .required {
+            color: red;
+            margin-left: 5px;
+        }
+        .form-section button {
+            background-color: #ff5c33;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .order-summary .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .order-summary .header a {
+            color: #ff5c33;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .order-summary .item {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .order-summary .item-title {
+            color: #ff5c33;
+            font-size: 16px;
+        }
+        .order-summary .price {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .order-summary .total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-section">
+        <div class="breadcrumb">Главная / Корзина / Оформление заказа</div>
+        <h2>Оформление заказа</h2>
+        <p>Заполните простую форму и наши менеджеры свяжутся с вами, ответят на любые вопросы и подготовят счет на оплату</p>
+        <form>
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="phone">Телефон <span class="required">*</span></label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="company">Название компании</label>
+            <input type="text" id="company" name="company">
+            
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="address">Адрес доставки</label>
+            <input type="text" id="address" name="address">
+            
+            <label for="comment">Комментарий к заказу</label>
+            <textarea id="comment" name="comment" rows="4"></textarea>
+            
+            <button type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+        </form>
+    </div>
+    <div class="order-summary">
+        <div class="header">
+            <h2>Ваш заказ</h2>
+            <a href="#">изменить</a>
+        </div>
+        <div class="item">
+            <div class="item-title">Полуструктурный агрополимерная линейка</div>
+            <div>от 3 490 р. x 1</div>
+        </div>
+        <div class="price">
+            <span>3 490</span>
+        </div>
+        <div class="total">
+            <span>Итого:</span>
+            <span>3 490</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Подготовительное задание</title>
+    <style>
+        .styled {
+            background-color: yellow;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: blue;
+        }
+        .styled img {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <p>Кривенко Евгений Витальевич</p>
+    <a href="https://classroom.google.com/u/0/c/NjYxMzMwMzE5Nzk4/a/Njk1NDAyNzc1NTg3/details">Мой любимый сайт</a>
+    <div id="delete-me">
+        <img src="Z6.jpg" alt="Пример изображения">
+        Работа с объектом Document+
+    </div>
+    <button id="change-style">Изменить стиль</button>
+    <script>
+        // Получение массива всех ссылок на странице
+        window.onload = function() {
+            setTimeout(function() {
+                const links = document.querySelectorAll('a');
+                console.log(links);
+            }, 1000);
+        };
+
+        // Удаление элемента при щелчке по нему
+        document.getElementById('delete-me').onclick = function() {
+            this.remove();
+        };
+
+        // Изменение стиля по нажатию кнопки
+        document.getElementById('change-style').onclick = function() {
+            document.body.classList.add('styled');
+        };
+
+        // Получение информации о глубине цвета и отображение в новом окне
+        const colorDepth = screen.colorDepth;
+        const newWindow = window.open('', '', 'width=800,height=600,scrollbars=no');
+        newWindow.document.write('<p>Глубина цвета экрана пользователя: ' + colorDepth + ' бит на пиксель</p>');
+    </script>
+</body>
+</html>

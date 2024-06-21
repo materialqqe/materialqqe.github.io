@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            width: 900px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-images {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-images img {
+            max-width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .thumbnails img {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+        .product-details {
+            flex: 1;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .product-details h1 {
+            font-size: 24px;
+            margin: 0;
+            font-weight: normal;
+        }
+        .price-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .price {
+            color: red;
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+            font-size: 18px;
+            margin: 0;
+        }
+        .price-quantity-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .quantity-sum-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 45px;
+            margin-right: 150px;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .quantity input {
+            width: 40px;
+            text-align: center;
+        }
+        .quantity button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sum {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+        .cart-buy-container {
+            display: flex;
+            align-items: center;
+            margin-left: 300px;
+       
+        }
+        .cart-btn, .buy-btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px; /* Small gap between buttons */
+        }
+        .cart-btn {
+            background-color: red;
+            color: white;
+            margin-left: 10px;
+        }
+        .buy-btn {
+            background-color: white;
+            color: red;
+            border: 1px solid red;
+            width: 200px;
+        }
+        .delivery {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .delivery p {
+            margin: 5px 0;
+        }
+        .find-cheaper {
+            margin-top: 20px;
+            color: red;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #3c93ce;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+        .badge.second {
+            top: 50px;
+            background-color: #d1ca09;
+            font-size: 14px;
+            color: black;    
+        }
+        .rating {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .rating img {
+            width: 20px;
+            height: 20px;
+            margin-right: 2px;
+        }
+        .availability {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="product-images">
+        <div class="badge">Хиты продаж</div>
+        <div class="badge second">По акции</div>
+        <img src="1.png" alt="Rainbow Umbrella">
+        <div class="thumbnails">
+            <img src="2.png" alt="Thumbnail 1">
+            <img src="3.png" alt="Thumbnail 2">
+            <img src="4.png" alt="Thumbnail 3">
+            <img src="5.png" alt="Thumbnail 4">
+        </div>
+    </div>
+    <div class="product-details">
+        <div class="rating">
+            <img src="zvezda.png" alt="Star">
+            <img src="zvezda.png" alt="Star">
+            <img src="zvezda.png" alt="Star">
+            <img src="zvezda.png" alt="Star">
+            <img src="zvezda.png" alt="Half Star">
+        </div>
+        <div class="availability">Есть в наличии</div>
+        <div class="price-quantity-container">
+            <div class="price-container">
+                <p class="price">19.90 руб.</p>
+                <p class="old-price">29.9 руб.</p>
+            </div>
+            <div class="quantity-sum-container">
+                <div class="quantity">
+                    <button>-</button>
+                    <input type="text" value="1">
+                    <button>+</button>
+                </div>
+                <div class="sum">Сумма: 19.90 руб.</div>
+            </div>
+        </div>
+        <div class="cart-buy-container">
+            <button class="cart-btn">В корзину</button>
+        </div>
+        <div class="actions">
+            <button class="buy-btn">Купить в 1 клик</button>
+        </div>
+        <div class="find-cheaper">Нашли дешевле?</div>
+        <div class="delivery">
+            <p>Доставка по Минску</p>
+            <p>Курьером - сегодня, стоимость: 4 руб.</p>
+            <p>Самовывоз из наших магазинов в Минске — сегодня, бесплатно.</p>
+            <p>О доставке по Беларуси</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

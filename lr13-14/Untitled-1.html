@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Документ</title>
+    <style>
+        /* Исходные стили для кнопок */
+        #changeStyleBtn, #showColorDepthBtn {
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Получение массива всех ссылок на странице
+            const links = document.querySelectorAll('a');
+            
+            // Вывод массива ссылок через 1 секунду после загрузки страницы
+            setTimeout(function() {
+                alert(Array.from(links));
+            }, 1000);
+
+            // Удаление изображения при щелчке по нему
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    img.remove();
+                });
+            });
+
+            // Применение стилей при нажатии на кнопку "Изменить стиль"
+            document.getElementById('changeStyleBtn').addEventListener('click', function() {
+                document.body.style.backgroundColor = 'yellow';
+                document.body.style.fontFamily = 'Arial, sans-serif';
+                document.body.style.fontSize = '12px';
+                document.body.style.color = 'blue';
+
+                images.forEach(function(img) {
+                    img.style.border = '1px solid green';
+                });
+            });
+
+            // Отображение информации о глубине цвета экрана в новом окне
+            document.getElementById('showColorDepthBtn').addEventListener('click', function() {
+                const colorDepth = window.screen.colorDepth;
+                const newWindow = window.open('', '', 'width=800,height=600,scrollbars=no');
+                newWindow.document.write(`<p>Глубина цвета экрана пользователя: ${colorDepth} бит на пиксель</p>`);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Фамилия Имя Отчество: Кривенко Евгений Витальевич</p>
+    <p>Ссылка на мой любимый сайт: <a href="https://classroom.google.com/u/0/c/NjYxMzMwMzE5Nzk4" target="_blank">Нажми на меня!</a></p>
+    <img src="4356b23f92ea5196632a11bd63256eb1.jpg" alt="Пример изображения">
+    <button id="changeStyleBtn">Изменить стиль</button>
+    <button id="showColorDepthBtn">Показать глубину цвета экрана</button>
+</body>
+</html>

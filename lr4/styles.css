@@ -1,0 +1,153 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Стили для навигации */
+nav {
+    background-color: #005f73;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #005f73;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0a7d83;
+}
+
+/* Стили для таблицы */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #0a7239;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #005f73;
+    color: #ffffff;
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Стили для видео и аудио */
+video, audio {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Стили для формы */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin: 5px 0;
+}
+
+form input[type="text"], form select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="radio"], form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #005f73;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0a7d83;
+}
+
+/* Стили для статей */
+article {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+article h2 {
+    font-family: Arial, sans-serif;
+    color: blue;
+}
+
+article p {
+    font-family: Arial, sans-serif;
+    color: rgb(161, 17, 17);
+    margin: 10px 0;
+}

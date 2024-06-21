@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+      <!-- Стиль таблицы -->
+      <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid rgb(10, 114, 57);
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя HTML-страница</title>
+ <!-- Мета-теги -->
+<meta content="Моя веб-страница" name="description">
+<meta content="Ваше имя" name="author">
+</head>
+<body>
+    <header class="main-header">
+        <!--Навигация сайта-->
+        <div main-navigation-wrapper>
+            <nav class="main-navigation">
+                <!--неупорядоченный список-->
+                <ul>
+                    <!--ссылки на html якори-->
+                    <li><a href="#section1">Главная</a></li>
+                    <li><a href="#section2">Обо мне</a></li>
+                    <li><a href="#section3">Услуги</a></li>
+                    <li><a href="#section4">Портфолио</a></li>
+                    <li><a href="#section5">Контакты</a></li>
+                    <li><a href="grid.html">grid</a></li>
+                    <li><a href="flex.html">flex</a></li>
+                    <li><a href="ЛР10-12/Untitled-1">10-12</a></li>
+                    <li><a href="lr13.html">13-14</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <button type="button"> <a href="12.html">Вход</a></button>
+    <!-- Навигация -->
+<nav>
+    <ul>
+        <li><a href="#skills">Мои навыки</a></li>
+        <li><a href="#foto">Фото</a></li>
+        <li><a href="#project">Проекты</a></li>
+        <li><a href="#sot">телеграм</a></li>
+        <li><a href="#audio">аудио</a></li>
+        <li><a href="#video">видео</a></li>
+        <li><a href="#form">форма</a></li>
+    </ul>
+</nav>
+
+<!-- Заголовок -->
+<h1>Мое первое html </h1>
+
+<!-- Абзац -->
+<p>Привет! Я - Евгений.</p>
+
+
+<!-- Список навыков -->
+<h2 id="skills">Мои навыки:</h2>
+<ul>
+    <li>HTML</li>
+    <li>Pyrhon</li>
+    <li>Adobe Photoshop</li>
+    <li>Adobe Illustrator</li>
+</ul>
+    <!-- Изображение -->
+    <h2 id="foto">Мои фотографии:</h2>
+    <img src="waw.jpg" alt="Моя фотография">
+    <!-- Таблица -->
+    <h2 id="project">Мои проекты на GitHub:</h2>
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Ссылка</th>
+        </tr>
+        <tr>
+            <td>1 проект</td>
+            <td><a href="https://github.com/materialqqe/LR20">Ссылка</a></td>
+        </tr>
+        <tr>
+            <td>2 проект</td>
+            <td><a href="https://github.com/materialqqe/LR20">Ссылка</a></td>
+        </tr>
+    </table>
+
+    <!-- Гиперссылки -->
+    <h2 id="sot">Соцсети:</h2>
+    <ul>
+        <li><a href="https://t.me/ttthrax">telegram</a></li>
+        
+    </ul>
+
+    <!-- Спецсимволы -->
+    <p>Символ © означает авторские права.</p>
+
+    <!-- Семантические теги -->
+    <article>
+        <h2 style="font-family: Arial, sans-serif; color: blue;">Факты об искусственном интеллекте</h2>
+        <p style="font-family: Arial, sans-serif; color: rgb(161, 17, 17);">1. С 2000 года рост стартапов в области искусственного интеллекта ускорился в 14 раз. 
+
+           <br> 2. В этом мире будет больше помощников ИИ, чем людей. Прогнозы показывают, что к 2024 году в мире будет 8,4 миллиарда цифровых голосовых помощников с искусственным интеллектом, что превышает общую численность населения мира.
+            
+            
+           <br> 3. Статистика искусственного интеллекта от MIT Sloan показывает, что 75% топ-менеджеров считают, что ИИ позволит их организации расти и достигать конкурентных преимуществ.
+            
+           <br> 4. Большинство потребителей считают, что ИИ улучшит их жизнь. Согласно опросу Strategy Analytics, 41% респондентов в Индии, Китае, Западной Европе и США считают, что новые технологии искусственного интеллекта улучшат их жизнь.
+            
+           <br>5. Многие люди не знают, что используют платформы ИИ. Согласно исследованию, опубликованному Pegasystems Inc., один из фактов об искусственном интеллекте заключается в том, что только 34% потребителей осознают, что они непосредственно взаимодействуют с ИИ. </p>
+    </article>
+<!-- Видео -->
+<h2 id="video">Любимые видео:</h2>
+<section>
+    <h3>Видео файл</h3>
+    <video width="320" height="240" controls>
+        <source src="nature.mp4" type="video/mp4">
+    </video>
+</section>
+
+     <!-- Аудио -->
+     <h2 id="audio">Любимая музыка:</h2>
+     <section>
+         <h3>Аудио файл</h3>
+         <audio controls>
+             <source src="Waves.mp3" type="audio/mpeg">   
+         </audio>
+     </section>
+
+    
+     <!-- форма -->
+    <h1 id="form">Регистрация</h1>
+    <p>Пожалуйста, заполните форму :</p>
+    <form action="/submit" method="post">
+        <label for="fname">Имя:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Фамилия:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="male">Мужской</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female">Женский</label>
+        <input type="radio" id="female" name="gender" value="female"><br>
+        
+        <label for="sport">Футбол</label>
+        <input type="checkbox" id="sport" name="interest" value="sport">
+        <label for="music">Музыка</label>
+        <input type="checkbox" id="music" name="interest" value="music">
+        <label for="music">Танцы</label>
+        <input type="checkbox" id="dance" name="interest" value="dance"><br>
+        <select id="country" name="country">
+            <option value="Россия">Россия</option>
+            <option value="Беларусь">Беларусь</option>
+            <option value="Китай">Казахстан</option>
+        </select><br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
